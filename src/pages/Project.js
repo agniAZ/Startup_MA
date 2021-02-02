@@ -11,22 +11,38 @@ import {
   Col,
 } from "reactstrap";
 
-function About() {
+function Project() {
   return (
     <>
       <div className="content">
         <Row>
-          <Col md="12">
+          <Col md="6">
             <Card>
               <CardHeader>
                 <p>
-                  About
+                Project
                 </p>
               </CardHeader>
               <CardBody>
                 <Row>
                   <Col>
-                    About
+                  Project
+                  </Col>
+                </Row>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col md="6">
+            <Card>
+              <CardHeader>
+                <p>
+                Project
+                </p>
+              </CardHeader>
+              <CardBody>
+                <Row>
+                  <Col>
+                  Project
                   </Col>
                 </Row>
               </CardBody>
@@ -37,4 +53,4 @@ function About() {
     </>
   );
 }
-export default About;
+export default Project;

@@ -1,5 +1,6 @@
 import Home from "./pages/Home.js";
 import About from "./pages/About.js";
+import Project from "./pages/Project.js";
 
 var routes = [
   
@@ -13,6 +14,12 @@ var routes = [
     path: "/about",
     name: "About",
     component: About,
+    layout: "/admin",
+  },
+  {
+    path: "/project",
+    name: "Project",
+    component: Project,
     layout: "/admin",
   },
  
