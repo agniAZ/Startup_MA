@@ -1,12 +1,39 @@
+
+
+
 .fixed-plugin{
+    // Small tablets and large smartphones (landscape view)
+    $sma: 990px;
+    $mda: 991px;
+
+    @mixin sm {
+        @media (max-width: #{$sma}) {
+            @content;
+        }
+     }
+     @mixin md {
+        @media (min-width: #{$mda}) {
+            @content;
+        }
+     }
+
+
+
     position: fixed;
     right: 0;
-    width: 64px;
+    
     background: rgba(0,0,0,.3);
     z-index: 1031;
-    border-radius: 8px 0 0 8px;
+    border-radius: 20px 0 0 20px;
     text-align: center;
-    top: 130px;
+    @include sm {
+        top: 100px;
+        width: 40px;
+    }
+    @include md {
+        top: 30px;
+        width: 64px;
+    }
 
     li > a,
     .badge{
