@@ -1,11 +1,13 @@
 /*eslint-disable*/
 import React from "react";
 
-import { Container, Nav, NavItem, NavLink } from "reactstrap";
+import { Container, Nav, NavItem, NavLink, Row, Col } from "reactstrap";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer row"> 
+    <div className="spacer">
+    </div>
       <Container fluid>
         <Nav>
           <NavItem>

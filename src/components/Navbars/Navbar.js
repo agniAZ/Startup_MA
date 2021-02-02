@@ -20,7 +20,14 @@ import {
   Modal,
   NavbarToggler,
   ModalHeader,
+  Row
 } from "reactstrap";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouseUser } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import routes from "../../routes";
+
 
 function AdminNavbar(props) {
   const [collapseOpen, setcollapseOpen] = React.useState(false);
@@ -54,6 +61,21 @@ function AdminNavbar(props) {
   const toggleModalSearch = () => {
     setmodalSearch(!modalSearch);
   };
+
+  const setIcon = () => {
+    if (props.brandText === 'Home'){
+      console.log('Home')
+    }
+    if (props.brandText === 'About'){
+      console.log('About')
+    }
+    if (props.brandText === 'Project'){
+      console.log('Project')
+    }
+    
+  }
+ 
+  
   return (
     <>
       <Navbar className={classNames("navbar-absolute", color)} expand="lg">
@@ -70,9 +92,9 @@ function AdminNavbar(props) {
                 <span className="navbar-toggler-bar bar3" />
               </NavbarToggler>
             </div>
-            <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
-              {props.brandText}
-            </NavbarBrand>
+              <NavbarBrand onClick={setIcon} onChange={setIcon}>
+                {props.brandText}
+              </NavbarBrand>
           </div>
           <NavbarToggler onClick={toggleCollapse}>
             <span className="navbar-toggler-bar navbar-kebab" />

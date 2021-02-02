@@ -12,6 +12,8 @@ import {
   backgroundColors,
 } from "../../contexts/BackgroundColorContext";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 var ps;
 
 function Sidebar(props) {
@@ -54,8 +56,15 @@ function Sidebar(props) {
                       activeClassName="active"
                       onClick={props.toggleSidebar}
                     >
-                      <i className={prop.icon} />
-                      <p>{rtlActive ? prop.rtlName : prop.name}</p>
+                      <FontAwesomeIcon 
+                      icon={prop.icon}
+                      size="2x"  
+                      transform=""
+                      pull="left" 
+                      color="orange"
+                      fixedWidth 
+                      />
+                      <p className="text-center"> {prop.name}</p>
                     </NavLink>
                   </li>
                 );

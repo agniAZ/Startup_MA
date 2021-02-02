@@ -26,7 +26,7 @@ function Project() {
               <CardBody>
                 <Row>
                   <Col>
-                  Project
+                  1
                   </Col>
                 </Row>
               </CardBody>
@@ -42,7 +42,7 @@ function Project() {
               <CardBody>
                 <Row>
                   <Col>
-                  Project
+                  2
                   </Col>
                 </Row>
               </CardBody>

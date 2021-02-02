@@ -9,6 +9,10 @@ import Footer from "./components/Footer/Footer.js";
 import Sidebar from "./components/Sidebar/Sidebar.js";
 import FixedPlugin from "./components/Theme/ThemeSwitch.js";
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDharmachakra } from '@fortawesome/free-solid-svg-icons'
+
 import routes from "./routes.js";
 
 import { BackgroundColorContext } from "./contexts/BackgroundColorContext";
@@ -78,7 +82,8 @@ function Admin(props) {
   const getBrandText = (path) => {
     for (let i = 0; i < routes.length; i++) {
       if (location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
-        return routes[i].name;
+        return routes[i].name
+        ;
       }
     }
     return "Name";
@@ -90,11 +95,6 @@ function Admin(props) {
           <div className="wrapper">
             <Sidebar
               routes={routes}
-              logo={{
-                outterLink: "https://www.creative-tim.com/",
-                text: "Creative Tim",
-               
-              }}
               toggleSidebar={toggleSidebar}
             />
             <div className="main-panel" ref={mainPanelRef} data={color}>
@@ -103,14 +103,12 @@ function Admin(props) {
                 toggleSidebar={toggleSidebar}
                 sidebarOpened={sidebarOpened}
               />
+              
               <Switch>
                 {getRoutes(routes)}
                 <Redirect from="*" to="/admin/home" />
               </Switch>
-              {
-                // we don't want the Footer to be rendered on map page
-                location.pathname === "" ? null : <Footer fluid />
-              }
+              <Footer />
             </div>
           </div>
           <FixedPlugin bgColor={color} handleBgClick={changeColor} />
