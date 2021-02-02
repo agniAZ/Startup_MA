@@ -4,6 +4,10 @@ import { Button, Dropdown, DropdownToggle, Badge } from "reactstrap";
 import { ThemeContext, themes } from "../../contexts/ThemeContext";
 import { backgroundColors } from "../../contexts/BackgroundColorContext";
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCog } from '@fortawesome/free-solid-svg-icons'
+
 function FixedPlugin(props) {
   const [dropDownIsOpen, setdropDownIsOpen] = React.useState(false);
   const handleClick = () => {
@@ -13,7 +17,7 @@ function FixedPlugin(props) {
     <div className="fixed-plugin">
       <Dropdown isOpen={dropDownIsOpen} toggle={handleClick}>
         <DropdownToggle tag="div">
-          <i className="fa fa-cog fa-2x" />
+            <FontAwesomeIcon icon={faCog} size="3x" inverse transform=" left-2"/>
         </DropdownToggle>
         <ul className="dropdown-menu show">
           <li className="header-title">SIDEBAR BACKGROUND</li>
