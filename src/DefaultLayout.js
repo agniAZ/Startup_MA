@@ -100,15 +100,21 @@ function Admin(props) {
     }
     return "Name";
   };
-  return  (
+  return (
+    <BackgroundColorContext.Consumer>
+      {({ color, changeColor }) => (
         <React.Fragment>
           <div className="wrapper">
             <Sidebar
               routes={routes}
-            
+              logo={{
+                outterLink: "https://www.creative-tim.com/",
+                text: "Creative Tim",
+               
+              }}
               toggleSidebar={toggleSidebar}
             />
-            <div className="main-panel" ref={mainPanelRef}>
+            <div className="main-panel" ref={mainPanelRef} data={color}>
               <AdminNavbar
                 brandText={getBrandText(location.pathname)}
                 toggleSidebar={toggleSidebar}
@@ -124,8 +130,10 @@ function Admin(props) {
               }
             </div>
           </div>
-         
+          <FixedPlugin bgColor={color} handleBgClick={changeColor} />
         </React.Fragment>
+      )}
+    </BackgroundColorContext.Consumer>
   );
 }
 
