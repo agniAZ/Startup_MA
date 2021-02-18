@@ -41,6 +41,7 @@ function AdminNavbar(props) {
   // this function is to open the Search modal
   const toggleModalSearch = () => {
     setmodalSearch(!modalSearch);
+    toggleModalSearch;
   };
 
   const setIcon = () => {
