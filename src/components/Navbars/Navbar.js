@@ -12,7 +12,6 @@ import {
 
 function AdminNavbar(props) {
   const [collapseOpen, setcollapseOpen] = React.useState(false);
-  const [modalSearch, setmodalSearch] = React.useState(false);
   const [color, setcolor] = React.useState("navbar-transparent");
   React.useEffect(() => {
     window.addEventListener("resize", updateColor);
@@ -39,10 +38,6 @@ function AdminNavbar(props) {
     setcollapseOpen(!collapseOpen);
   };
   // this function is to open the Search modal
-  const toggleModalSearch = () => {
-    setmodalSearch(!modalSearch);
-    toggleModalSearch;
-  };
 
   const setIcon = () => {
     if (props.brandText === 'Home'){
