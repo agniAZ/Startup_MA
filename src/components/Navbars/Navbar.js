@@ -4,30 +4,11 @@ import classNames from "classnames";
 
 // reactstrap components
 import {
-  Button,
-  Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  Input,
-  InputGroup,
   NavbarBrand,
   Navbar,
-  NavLink,
-  Nav,
   Container,
-  Modal,
   NavbarToggler,
-  ModalHeader,
-  Row
 } from "reactstrap";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouseUser } from '@fortawesome/free-solid-svg-icons'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import routes from "../../routes";
-
 
 function AdminNavbar(props) {
   const [collapseOpen, setcollapseOpen] = React.useState(false);

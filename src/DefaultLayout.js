@@ -9,10 +9,6 @@ import Footer from "./components/Footer/Footer.js";
 import Sidebar from "./components/Sidebar/Sidebar.js";
 import FixedPlugin from "./components/Theme/ThemeSwitch.js";
 
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDharmachakra } from '@fortawesome/free-solid-svg-icons'
-
 import routes from "./routes.js";
 
 import { BackgroundColorContext } from "./contexts/BackgroundColorContext";
