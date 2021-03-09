@@ -5,7 +5,7 @@ import { MemoryRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import AdminLayout from "./DefaultLayout.js";
 
-import "./assets/scss/black-dashboard-react.scss";
+import "./assets/scss/startup-ma.scss";
 
 import ThemeContextWrapper from "./components/Theme/ThemeWrapper";
 import BackgroundColorWrapper from "./components/Theme/BackgroundColorWrapper";
