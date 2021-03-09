@@ -4,7 +4,7 @@ import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // core components
-import AdminNavbar from "./components/Navbars/Navbar.js";
+import StartupNavbar from "./components/Navbars/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import Sidebar from "./components/Sidebar/Sidebar.js";
 
@@ -13,7 +13,7 @@ import routes from "./routes.js";
 
 var ps;
 
-function Admin(props) {
+function Startup(props) {
   const location = useLocation();
   const mainPanelRef = React.useRef(null);
   const [sidebarOpened, setsidebarOpened] = React.useState(
@@ -60,7 +60,7 @@ function Admin(props) {
   };
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/startup") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -90,7 +90,7 @@ function Admin(props) {
               toggleSidebar={toggleSidebar}
             />
             <div className="main-panel" ref={mainPanelRef}>
-              <AdminNavbar
+              <StartupNavbar
                 brandText={getBrandText(location.pathname)}
                 toggleSidebar={toggleSidebar}
                 sidebarOpened={sidebarOpened}
@@ -98,7 +98,7 @@ function Admin(props) {
               
               <Switch>
                 {getRoutes(routes)}
-                <Redirect from="*" to="/admin/home" />
+                <Redirect from="*" to="/startup/home" />
               </Switch>
               <Footer />
             </div>
@@ -107,4 +107,4 @@ function Admin(props) {
         </React.Fragment>
       )}
 
-export default Admin;
+export default Startup;

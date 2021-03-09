@@ -16,28 +16,28 @@ var routes = [
     name: "Home",
     component: Home,
     icon: faHouseUser,
-    layout: "/admin",
+    layout: "/startup",
   },
   {
     path: "/about",
     name: "About",
     component: About,
     icon: faInfoCircle,
-    layout: "/admin",
+    layout: "/startup",
   },
   {
     path: "/project",
     name: "Project",
     component: Project,
     icon: faWarehouse,
-    layout: "/admin",
+    layout: "/startup",
   },
   {
     path: "/survey",
     name: "Survey",
     component: Survey,
     icon: faClipboardList,
-    layout: "/admin",
+    layout: "/startup",
   },
  
 ];

@@ -10,7 +10,7 @@ import {
   NavbarToggler,
 } from "reactstrap";
 
-function AdminNavbar(props) {
+function StartupNavbar(props) {
   const [collapseOpen, setcollapseOpen] = React.useState(false);
   const [color, setcolor] = React.useState("navbar-transparent");
   React.useEffect(() => {
@@ -87,4 +87,4 @@ function AdminNavbar(props) {
   );
 }
 
-export default AdminNavbar;
+export default StartupNavbar;
