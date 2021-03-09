@@ -2,7 +2,7 @@
   padding: 10px 30px 10px 15px;
   width: 100%;
   z-index: 1050;
-  background: $navbar-color;
+  background: $primary;
 
   .photo {
     display: inline-block;
@@ -299,7 +299,7 @@
       }
 
       &.bg-white:not(.navbar-transparent) .navbar-toggler-bar{
-          background-color: $default;
+          background-color: $primary;
       }
 
       & .toggled .navbar-toggler-bar{
