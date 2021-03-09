@@ -7,10 +7,6 @@ import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
 import { Nav, NavLink as ReactstrapNavLink } from "reactstrap";
-import {
-  BackgroundColorContext,
-  backgroundColors,
-} from "../../contexts/BackgroundColorContext";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
