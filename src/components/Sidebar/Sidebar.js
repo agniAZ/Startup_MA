@@ -54,9 +54,8 @@ function Sidebar(props) {
                       icon={prop.icon}
                       size="2x"  
                       transform=""
-                      pull="left" 
-                      color="orange"
-                      fixedWidth 
+                      pull="left"
+                      fixedWidth
                       />
                       <p className="text-center"> {prop.name}</p>
                     </NavLink>
