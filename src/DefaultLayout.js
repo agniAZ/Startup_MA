@@ -7,11 +7,9 @@ import PerfectScrollbar from "perfect-scrollbar";
 import AdminNavbar from "./components/Navbars/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import Sidebar from "./components/Sidebar/Sidebar.js";
-import FixedPlugin from "./components/Theme/ThemeSwitch.js";
 
 import routes from "./routes.js";
 
-import { BackgroundColorContext } from "./contexts/BackgroundColorContext";
 
 var ps;
 
@@ -85,15 +83,13 @@ function Admin(props) {
     return "Name";
   };
   return (
-    <BackgroundColorContext.Consumer>
-      {({ color, changeColor }) => (
         <React.Fragment>
           <div className="wrapper">
             <Sidebar
               routes={routes}
               toggleSidebar={toggleSidebar}
             />
-            <div className="main-panel" ref={mainPanelRef} data={color}>
+            <div className="main-panel" ref={mainPanelRef}>
               <AdminNavbar
                 brandText={getBrandText(location.pathname)}
                 toggleSidebar={toggleSidebar}
@@ -107,11 +103,8 @@ function Admin(props) {
               <Footer />
             </div>
           </div>
-          <FixedPlugin bgColor={color} handleBgClick={changeColor} />
+          
         </React.Fragment>
       )}
-    </BackgroundColorContext.Consumer>
-  );
-}
 
 export default Admin;

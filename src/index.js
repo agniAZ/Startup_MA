@@ -7,19 +7,15 @@ import AdminLayout from "./DefaultLayout.js";
 
 import "./assets/scss/startup-ma.scss";
 
-import ThemeContextWrapper from "./components/Theme/ThemeWrapper";
-import BackgroundColorWrapper from "./components/Theme/BackgroundColorWrapper";
+// import ThemeContextWrapper from "./components/Theme/ThemeWrapper";
+// import BackgroundColorWrapper from "./components/Theme/BackgroundColorWrapper";
 
 ReactDOM.render(
-  <ThemeContextWrapper>
-    <BackgroundColorWrapper>
       <MemoryRouter>
         <Switch>
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
           <Redirect from="/" to="/admin/icons" />
         </Switch>
-      </MemoryRouter>
-    </BackgroundColorWrapper>
-  </ThemeContextWrapper>,
+      </MemoryRouter>,
   document.getElementById("root")
 );

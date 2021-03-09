@@ -32,12 +32,10 @@ function Sidebar(props) {
     }
     
   });
-  const { routes, rtlActive } = props;
+  const { routes } = props;
   
   return (
-    <BackgroundColorContext.Consumer>
-      {({ color }) => (
-        <div className="sidebar" data={color}>
+        <div className="sidebar">
           <div className="sidebar-wrapper" ref={sidebarRef}>
             
             <Nav>
@@ -73,9 +71,6 @@ function Sidebar(props) {
           </div>
         </div>
       )}
-    </BackgroundColorContext.Consumer>
-  );
-}
 
 
 
