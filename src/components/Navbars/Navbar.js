@@ -23,7 +23,7 @@ function StartupNavbar(props) {
   // function that adds color white/transparent to the navbar on resize (this is for the collapse)
   const updateColor = () => {
     if (window.innerWidth < 993 && collapseOpen) {
-      setcolor("primary");
+      setcolor("navbar-transparent");
     } else {
       setcolor("navbar-transparent");
     }
@@ -33,7 +33,7 @@ function StartupNavbar(props) {
     if (collapseOpen) {
       setcolor("navbar-transparent");
     } else {
-      setcolor("primary");
+      setcolor("navbar-transparent");
     }
     setcollapseOpen(!collapseOpen);
   };
@@ -73,11 +73,6 @@ function StartupNavbar(props) {
                 {props.brandText}
               </NavbarBrand>
           </div>
-          <NavbarToggler onClick={toggleCollapse}>
-            <span className="navbar-toggler-bar navbar-kebab" />
-            <span className="navbar-toggler-bar navbar-kebab" />
-            <span className="navbar-toggler-bar navbar-kebab" />
-          </NavbarToggler>
          
         </Container>
       </Navbar>
