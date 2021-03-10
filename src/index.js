@@ -1,18 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 //switch memory for browser on deploy
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { MemoryRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import StartupLayout from "./DefaultLayout.js";
 
 import "./assets/scss/startup-ma.scss";
 
 ReactDOM.render(
-      <BrowserRouter>
+      <MemoryRouter>
         <Switch>
           <Route path="" render={(props) => <StartupLayout {...props} />} />
           <Redirect from="/" to="/startup/icons" />
         </Switch>
-      </BrowserRouter>,
+      </MemoryRouter>,
   document.getElementById("root")
 );
